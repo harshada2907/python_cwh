@@ -1,0 +1,173 @@
+DATA TYPES IN PYTHON
+
+1] LISTS
+------------
+1. List is an ordered collection of data values
+2. Lists are mutable
+3. Store multiple values in a single variable
+4. Lists values are separated by commas and enclosed within square brackets[]
+5. A single list can store different data type values
+6. Lists elements are accessed using index
+
+SOME METHODS OF THE LIST DATA TYPE IS:
+-------------------------------------
+Let's consider the list to be
+l = [1, 2, 3, 4, 5, 6]
+m = [900, 1000, 1100]
+
+
+1. l.append(value) - Appends the value to the list at the end.
+
+2. l.sort() - will sort the list in ascending order
+
+3. l.sort(reverse = True) - Will sort the list in the descending order
+
+4. l.reverse() - Will reverse the entire list
+
+5. l.index(2) - Will return the index of the data 2
+
+6. l.count(2) - Will count the number of 2's in the list and return the count
+
+7. m = l.copy() - Will copy the list l in the new list m
+Since lists are mutable if we do
+m = l
+so m will here be the refernce of l and if we change any value of m the same change will also reflect
+in the l so to avoid this we will create a copy of l in m
+
+8. l.insert(index, object)/(1, 67) - Will insert the object at the given index in the list
+
+9. l.extend(m) - Will extend the list l and add the elements of m to l at the end
+l = [1, 2, 3, 4, 5, 6, 900, 1000, 1100]
+
+10. Concat the lists - k = l + m - Will join/concat the lists l and m together and will create a new list
+and store it in the variable k
+
+--------------------------------------------------------------------------------------------------------------
+2] TUPLE
+---------
+1. Tuples are immutable
+2. They are too the collection of various data types
+3. They are separated by commas and enclosed within round brackets()
+4. Tuple elements are accessed using index
+
+
+-Tuples are immutable, hence if you want to add, remove or change tuple items, then first you must convert
+the tuple to a list. Then perform operatio on that list and convert it back to tuple.
+
+-we can concat/join two tuples and is valid since we are creating a new tuple
+
+-we can use all the methods of list on tuple once we convert tuple into list
+
+SOME METHODS OF THE TUPLE DATA TYPE
+-----------------------------------
+Let us consider the below tuple example
+tuple1 = (0, 1, 2, 3, 2, 3, 1, 3, 2, 3)
+
+1. tuple1.count(3) - will count the number of occurences of 3 in the tuple
+
+2. tuple.index(3) -will return first place index of occurence of 3 in the tuple
+   tuple.index(3: value, 4: start, 8: stop) - will search for the value(3) here in the range(start, stop)
+   and will return the index place of that  value
+
+3. len(tuple1) - will return the length of the tuple
+
+-------------------------------------------------------------------------------------------------------------
+3] SETS
+
+1. Sets are unordered collection of data items.
+2. They store multiple values in a single variable
+3. Set items are separated by commas and are enclosed within a curly brackets{}
+4. Sets are unchangeable meaning you cannot change items of the set once created. sets are immutable
+5. Sets do not contain duplicate elements
+
+-To make empty set in python
+s = set()
+print(type(s))    #o/p - class=set
+
+METHOD OF SETS
+--------------
+
+Let the example be
+cities = {"Tokyo", "Madrid", "Berlin", "Delhi"}
+cities2 = {"Tokyo", "Seoul", "Kabul", "Madrid"}
+
+
+1. cities.intersection(cities2) - returns a new set of intersection
+
+2. cities.intersection_update(cities2) - updates into the existing set from another set
+
+3. cities.union(cities2) - returns a new set of union
+
+4. cities.update(cities2) - adds new item into the existing set from another set
+
+5. cities.symmetric_difference(cities2) - (cities union cities2)-(cities intersection cities2)
+
+6. difference method:-
+    prints only items that are only present in the original set and not in both the sets means set1
+    excluding the intersection of set1 and set2
+    1. cities.difference(cities2) - returns a new set
+
+    2. cities.difference_update(cities2) - updates into the existing set from another set
+
+7. isdisjoint - cities.isdisjoint(cities2) - checks if items of given set are present in another set.
+    The method returns false if items are present else true
+
+8. issuperset - cities.issuperset(cities2) - check if all the items of a particular set are present in the
+   original set. It returns true if all the items are present , else it returns false.
+
+9. issubset - cities2.issubset(cities) - check if all the items of the original set are present in the
+   particular set. It returns true if all the items are present , else false
+
+10. add - cities.add("Helsinki") - will add the mentioned element("helsinki") here to the set
+
+11. remove - cities.remove("Tokyo") - will remove the mentioned element("Tokyo") here from the set
+
+12. discard - cities.discard("Tokyo") - will remove the mentioned element("Tokyo") here from the set
+----The difference between remove and discard is that if the element which is not present in the set
+----is mentioned by the user in the method then remove will thorw an error but discard will not throw
+----any error
+
+13. pop() - cities.pop() - removes the last item of the set but the catch is that we don't know which item
+    gets popped as sets are unordered. However you can access the popped item, if you assign the pop()
+    method to a variable
+
+14. del(set_name) - del(cities) - del is not a method, rather it is a keyword which deletes the set
+    entirely
+
+15. clear(set_name) - cities.clear() - This method clears all the items in the set and prints an empty set.
+
+-----------------------------------------------------------------------------------------------------------
+4] DICTIONARY
+
+1. dictionaries are ordered collection of data items.
+2. They store multiple items in a single variable.
+3. dictionary items are key vakue pairs that are separated by commas and enclosed within curly brackets{}.
+4. Dictionary can be accessed using keys. We can access dictionary values by mentioning keys either in
+   square brackets or bu using get method.
+
+----difference between mentioning key and using get method is that key will give an error if the key is not
+----not present in the dictionary but the get method will not give any error.
+
+SOME METHOD IN DICTIONARY
+-------------------------
+
+Consider the belowe example of the dictionary
+
+ep1 = {122: 45, 123: 89, 5677: 69, 670: 69}
+ep2 = {222: 67, 566: 90}
+
+1. update() - ep1.update(ep2) - updates the value of the key provided to it if the item already exists in the
+   dictionary, else it creates a new key-value pair.
+
+2. clear() - ep1.clear() - removes all the items from the list.
+
+3. pop() - ep1.pop(122) - removes the ley value pair whose ley is passed as parameter.
+
+4. ep1.popitem() - removes the last key-value pair from the dictionary.
+
+5. del - del ep1 - to remove the dictionary item. iF key is not provided, then the del keyword will delete
+   the dictionary entirely.
+
+
+
+6.

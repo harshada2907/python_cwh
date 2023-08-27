@@ -1,0 +1,25 @@
+String Methods in Python
+
+```STRINGS IN PYTHON ARE IMMUTABLE```
+
+1] UPPER() AND LOWER()
+    It converts the string to upper and lower case as mentioned
+
+2] RSTRIP("__the unwanted part of the string__")
+    It strips the unwanted part in the string as given in the method
+
+3] REPLACE("__old string__, "__new string__")
+    It replaces the old string with the new string as per given in the method
+
+4] SPLIT("__The content of the string uptil which it is to be split__")
+    It splits the string in parts as given in the method
+
+5] CAPITALIZE()
+    It capitalizes the first letter of the string and lowers all the other characters of the string
+
+6] CENTER()
+    It gives the number of spaces to the string as per mentioned by the user
+
+7] ENDSWITH()
+    It checks if the string ends with the character or the one specified in the method by the user
+

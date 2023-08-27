@@ -1,0 +1,24 @@
+ABOUT DOCSTRINGS AND PEP8
+
+Python docstrings are the string literals that appear right after the definition of a function, method,
+class, module
+
+-should be written right below the function definition otherwise will not br considered.
+
+example:-
+
+def square(n):     function definition
+    '''Takes in a number n, and returns the square of n'''
+    print(n**2)
+
+square(5)          function call
+print(square.__doc__)   this will also print my docstring
+
+
+PEP8
+
+-stands for PYTHON ENHANCEMENT PROPOSAL
+-PEP9 is a document that provides guidelines and best practices on how to write the python code.The primary
+focus of pep8 is to improve the readability and consistency of python code.
+
+
